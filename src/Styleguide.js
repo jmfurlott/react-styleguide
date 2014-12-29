@@ -7,13 +7,41 @@ let Styleguide = React.createClass({
   listComponentTitles() {
     let children = this.props.children;
     
+    children = (React.Children.count(children) == 1) ? [ children ] : children;
     return children.map(function(child) {
       return <li>{child.props.title}</li>;
     });
   },
+
+  listComponents() {
+    let children = this.props.children;
+    let self = this;
+
+    children = (React.Children.count(children) == 1) ? [ children ] : children;
+    return children.map(function(child) {
+      console.log(child);
+      
+      let code = React.renderToStaticMarkup(child.props.children);
+
+      return(
+        <div className="Styleguide-components-component">
+          <h2 className="Styleguide-components-component-title">{child.props.title}</h2>
+          <p className="Styleguide-components-component-description">{child.props.description}</p>
+          <div className="Styleguide-components-component-example">{child.props.children}</div>
+          <div className="Styleguide-components-component-code">
+            <pre>
+              <code className="language-javascript"> 
+                {child.props.example}
+              </code>
+            </pre>
+          </div>
+        </div>
+      );
+    });
+  },
   
   componentDidMount() {
-    console.log(this.props.children);
+    //console.log(this.props.children);
   },
 
   render() {
@@ -28,7 +56,9 @@ let Styleguide = React.createClass({
             {this.listComponentTitles()}
           </ul>
         </div>
-        <div className="Styleguide-components">sfsf</div>
+        <div className="Styleguide-components">
+          {this.listComponents()}
+        </div>
       </div>
     );
   }

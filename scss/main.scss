@@ -1,9 +1,9 @@
+@import 'vendor/prism';
 .Styleguide {
     &-header {
         height: 5rem;
         width: 100%;
         position: fixed;
-        background-color: red;
         z-index: 1;
     }
 
@@ -13,13 +13,11 @@
         left: 0;
         height: 100%;
         width: 10rem;
-        background-color: blue;
     }
 
     &-components {
         position: relative;
         top: 5rem;
         margin-left: 10rem;
-        width: 100%;
     }
 }

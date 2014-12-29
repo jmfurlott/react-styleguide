@@ -30,6 +30,16 @@ var Component = React.createClass({
 });
 ```
 
+Optional Includes
+-----------------
+You can have the styleguide come styling free if you desire, but it is also possible to have the included styles be used (they can be seen in the screenshots).  Please look at the `demo/index.html` to see what else could be included.
+
+- Google web fonts
+- `main.css` located in the `dist` folder
+- `prism.js` located in the `demo` folder
+
+Any and all of these are optional but are recommended.
+
 Screenshots
 -----------
 

@@ -9,7 +9,8 @@
     "postbuild": "browserify dist/StyleguideDemo.js -o demo/demo.js",
     "test": "npm run build && mocha ./dist/test/**/*.js",
     "styles": "node-sass scss/main.scss dist/main.css",
-    "prepublish": "npm run test"
+    "prepublish": "npm run test",
+    "watch": "6to5 -w src -d dist --modules commonInterop && watchify dist/StyleguideDemo.js -o demo/demo.js"
   },
   "keywords": [
     "react",
@@ -32,5 +33,6 @@
     "node-sass": "~1.2.2",
     "react": "0.12.x",
     "reactify": "~0.17.1"
-  }
+  },
+  "dependencies": {}
 }
