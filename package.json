@@ -1,0 +1,34 @@
+{
+  "name": "react-styleguide",
+  "version": "0.0.1",
+  "description": "A component that generates a style guide from components",
+  "main": "dist/Styleguide.js",
+  "scripts": {
+    "build": "6to5 src -d dist --modules commonInterop",
+    "postbuild": "browserify dist/StyleguideDemo.js -o demo/demo.js",
+    "test": "npm run build && mocha ./dist/test/**/*.js",
+    "prepublish": "npm run test"
+  },
+  "keywords": [
+    "react",
+    "styleguide",
+    "components",
+    "generate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmfurlott/react-styleguide.git"
+  },
+  "author": "Joseph Furlott <jmfurlott@gmail.com>",
+  "license": "MIT",
+  "devDependencies" : {
+    "6to5": "~1.15.0",
+    "chai": "~1.10.0",
+    "jquery": "~2.1.3",
+    "jsdom": "~1.5.0",
+    "mocha": "~2.0.1",
+    "react": "0.12.x",
+    "reactify": "~0.17.1"
+
+  }
+}
