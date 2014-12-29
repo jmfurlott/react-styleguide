@@ -8,8 +8,10 @@ let Styleguide = React.createClass({
     let children = this.props.children;
     
     children = (React.Children.count(children) == 1) ? [ children ] : children;
+    
     return children.map(function(child) {
-      return <li>{child.props.title}</li>;
+      let title = child.props.title.replace(' ','-');
+      return <li><a href={'#' + title}>{child.props.title}</a></li>;
     });
   },
 
@@ -21,10 +23,10 @@ let Styleguide = React.createClass({
     return children.map(function(child) {
       console.log(child);
       
-      let code = React.renderToStaticMarkup(child.props.children);
+      let title = child.props.title.replace(' ','-');
 
       return(
-        <div className="Styleguide-components-component">
+        <div className="Styleguide-components-component" id={title}>
           <h2 className="Styleguide-components-component-title">{child.props.title}</h2>
           <p className="Styleguide-components-component-description">{child.props.description}</p>
           <div className="Styleguide-components-component-example">{child.props.children}</div>
@@ -49,7 +51,7 @@ let Styleguide = React.createClass({
     return( 
       <div className="Styleguide">
         <div className="Styleguide-header">
-          <h1>Components</h1>
+          <h1>{this.props.title}</h1>
         </div>
         <div className="Styleguide-sidebar">
           <ul className="Styleguide-sidebar-list">

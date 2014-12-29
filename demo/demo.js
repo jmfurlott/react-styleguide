@@ -17,8 +17,12 @@ var Styleguide = React.createClass({
     var children = this.props.children;
 
     children = (React.Children.count(children) == 1) ? [children] : children;
+
     return children.map(function (child) {
-      return React.createElement("li", null, child.props.title);
+      var title = child.props.title.replace(" ", "-");
+      return React.createElement("li", null, React.createElement("a", {
+        href: "#" + title
+      }, child.props.title));
     });
   },
 
@@ -30,10 +34,11 @@ var Styleguide = React.createClass({
     return children.map(function (child) {
       console.log(child);
 
-      var code = React.renderToStaticMarkup(child.props.children);
+      var title = child.props.title.replace(" ", "-");
 
       return (React.createElement("div", {
-        className: "Styleguide-components-component"
+        className: "Styleguide-components-component",
+        id: title
       }, React.createElement("h2", {
         className: "Styleguide-components-component-title"
       }, child.props.title), React.createElement("p", {
@@ -55,7 +60,7 @@ var Styleguide = React.createClass({
       className: "Styleguide"
     }, React.createElement("div", {
       className: "Styleguide-header"
-    }, React.createElement("h1", null, "Components")), React.createElement("div", {
+    }, React.createElement("h1", null, this.props.title)), React.createElement("div", {
       className: "Styleguide-sidebar"
     }, React.createElement("ul", {
       className: "Styleguide-sidebar-list"
@@ -82,8 +87,18 @@ var Styleguide = _interopRequire(require('./Styleguide.js'));
 
 var Button = _interopRequire(require('./examples/Button.js'));
 
-React.render(React.createElement(Styleguide, null, React.createElement("div", {
+React.render(React.createElement(Styleguide, {
+  title: "Example Project Styleguide"
+}, React.createElement("div", {
   title: "Button",
+  description: "Here is a description describing a simple Button and all that it has to offer.",
+  example: "<div className=\"Blockquote\">\n  <div className=\"Blockquote-text\">{this.props.text}</div>\n  <span className=\"Blockquote-speaker\">\u2014 {this.props.speaker}</span>\n</div>"
+}, React.createElement(Button, null), React.createElement(Button, null), React.createElement(Button, null)), React.createElement("div", {
+  title: "Button1",
+  description: "Here is a description describing a simple Button and all that it has to offer.",
+  example: "<Button />"
+}, React.createElement(Button, null)), React.createElement("div", {
+  title: "Button2",
   description: "Here is a description describing a simple Button and all that it has to offer.",
   example: "<Button />"
 }, React.createElement(Button, null)), React.createElement("div", {
@@ -91,47 +106,7 @@ React.render(React.createElement(Styleguide, null, React.createElement("div", {
   description: "Here is a description describing a simple Button and all that it has to offer.",
   example: "<Button />"
 }, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
+  title: "Button5",
   description: "Here is a description describing a simple Button and all that it has to offer.",
   example: "<Button />"
 }, React.createElement(Button, null)), React.createElement("div", {
