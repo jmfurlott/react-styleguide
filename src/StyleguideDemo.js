@@ -8,7 +8,7 @@ import Button from './examples/Button.js';
 
 React.render(<Styleguide title="Example Project Styleguide">
                  <div 
-                  title="Button" 
+                  title="Blockquote" 
                   description="Here is a description describing a simple Button and all that it has to offer." 
                   example='<div className="Blockquote">
   <div className="Blockquote-text">{this.props.text}</div>
@@ -21,51 +21,20 @@ React.render(<Styleguide title="Example Project Styleguide">
                 </div>
 
                 <div 
-                  title="Button1" 
-                  description="Here is a description describing a simple Button and all that it has to offer." 
-                  example="<Button />"
-                >
-                  <Button />
-                </div>
-                <div 
-                  title="Button2" 
-                  description="Here is a description describing a simple Button and all that it has to offer." 
-                  example="<Button />"
-                >
-                  <Button />
-                </div>
- 
-                <div 
                   title="Button" 
                   description="Here is a description describing a simple Button and all that it has to offer." 
                   example="<Button />"
                 >
                   <Button />
                 </div>
- 
                 <div 
-                  title="Button5" 
+                  title="Footer" 
                   description="Here is a description describing a simple Button and all that it has to offer." 
                   example="<Button />"
                 >
                   <Button />
                 </div>
  
-                <div 
-                  title="Button" 
-                  description="Here is a description describing a simple Button and all that it has to offer." 
-                  example="<Button />"
-                >
-                  <Button />
-                </div>
- 
-                <div 
-                  title="Button" 
-                  description="Here is a description describing a simple Button and all that it has to offer." 
-                  example="<Button />"
-                >
-                  <Button />
-                </div>
-            </Styleguide>
+           </Styleguide>
              , document.getElementById('demo'));
 

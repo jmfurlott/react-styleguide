@@ -90,31 +90,15 @@ var Button = _interopRequire(require('./examples/Button.js'));
 React.render(React.createElement(Styleguide, {
   title: "Example Project Styleguide"
 }, React.createElement("div", {
-  title: "Button",
+  title: "Blockquote",
   description: "Here is a description describing a simple Button and all that it has to offer.",
   example: "<div className=\"Blockquote\">\n  <div className=\"Blockquote-text\">{this.props.text}</div>\n  <span className=\"Blockquote-speaker\">\u2014 {this.props.speaker}</span>\n</div>"
 }, React.createElement(Button, null), React.createElement(Button, null), React.createElement(Button, null)), React.createElement("div", {
-  title: "Button1",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button2",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
   title: "Button",
   description: "Here is a description describing a simple Button and all that it has to offer.",
   example: "<Button />"
 }, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button5",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
-  description: "Here is a description describing a simple Button and all that it has to offer.",
-  example: "<Button />"
-}, React.createElement(Button, null)), React.createElement("div", {
-  title: "Button",
+  title: "Footer",
   description: "Here is a description describing a simple Button and all that it has to offer.",
   example: "<Button />"
 }, React.createElement(Button, null))), document.getElementById("demo"));
