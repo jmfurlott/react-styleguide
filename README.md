@@ -6,11 +6,13 @@ A React component that takes in other components and organizes them into an easy
 Example Usage
 -------------
 
+Include the generated css file from `dist` if you want to use the styling that I've created in your project.
+
 Just create a new component containing the Styleguide component.  Include all the components that you want in the styleguide and provide the information that you want in include in the props.
 
 ```
 var React = require('react');
-var Styleguide = require('react-styleguide');a
+var Styleguide = require('react-styleguide');
 
 // Require the components that you want to include
 var Component1 = require('./Component1.js');

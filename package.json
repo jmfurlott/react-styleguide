@@ -4,9 +4,11 @@
   "description": "A component that generates a style guide from components",
   "main": "dist/Styleguide.js",
   "scripts": {
+    "prebuild": "npm run styles",
     "build": "6to5 src -d dist --modules commonInterop",
     "postbuild": "browserify dist/StyleguideDemo.js -o demo/demo.js",
     "test": "npm run build && mocha ./dist/test/**/*.js",
+    "styles": "node-sass scss/main.scss dist/main.css",
     "prepublish": "npm run test"
   },
   "keywords": [
@@ -21,14 +23,14 @@
   },
   "author": "Joseph Furlott <jmfurlott@gmail.com>",
   "license": "MIT",
-  "devDependencies" : {
+  "devDependencies": {
     "6to5": "~1.15.0",
     "chai": "~1.10.0",
     "jquery": "~2.1.3",
     "jsdom": "~1.5.0",
     "mocha": "~2.0.1",
+    "node-sass": "~1.2.2",
     "react": "0.12.x",
     "reactify": "~0.17.1"
-
   }
 }

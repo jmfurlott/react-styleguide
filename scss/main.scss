@@ -1,0 +1,25 @@
+.Styleguide {
+    &-header {
+        height: 5rem;
+        width: 100%;
+        position: fixed;
+        background-color: red;
+        z-index: 1;
+    }
+
+    &-sidebar {
+        position: fixed;
+        top: 5rem;
+        left: 0;
+        height: 100%;
+        width: 10rem;
+        background-color: blue;
+    }
+
+    &-components {
+        position: relative;
+        top: 5rem;
+        margin-left: 10rem;
+        width: 100%;
+    }
+}

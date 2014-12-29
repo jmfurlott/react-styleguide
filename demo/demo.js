@@ -13,10 +13,30 @@ var Styleguide = React.createClass({
   displayName: "Styleguide",
 
 
+  listComponentTitles: function () {
+    var children = this.props.children;
+
+    return children.map(function (child) {
+      return React.createElement("li", null, child.props.title);
+    });
+  },
+
+  componentDidMount: function () {
+    console.log(this.props.children);
+  },
+
   render: function () {
     return (React.createElement("div", {
       className: "Styleguide"
-    }, "Hello world"));
+    }, React.createElement("div", {
+      className: "Styleguide-header"
+    }, React.createElement("h1", null, "Components")), React.createElement("div", {
+      className: "Styleguide-sidebar"
+    }, React.createElement("ul", {
+      className: "Styleguide-sidebar-list"
+    }, this.listComponentTitles())), React.createElement("div", {
+      className: "Styleguide-components"
+    }, "sfsf")));
   }
 
 });
@@ -35,7 +55,15 @@ var React = _interopRequire(require('react/addons'));
 
 var Styleguide = _interopRequire(require('./Styleguide.js'));
 
-React.render(React.createElement(Styleguide, null), document.getElementById("demo"));
+React.render(React.createElement(Styleguide, null, React.createElement("div", {
+  className: "Component1",
+  title: "First Component",
+  description: "This is a description describing this component"
+}), React.createElement("div", {
+  className: "Component2",
+  title: "Second Component",
+  description: "This is a description describing the second component"
+})), document.getElementById("demo"));
 },{"./Styleguide.js":1,"react/addons":3}],3:[function(require,module,exports){
 module.exports = require('./lib/ReactWithAddons');
 
