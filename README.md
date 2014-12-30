@@ -30,7 +30,7 @@ Just create a new component containing the Styleguide component.  Include all th
 Inside the `div`, include the code that should be rendered and displayed in the styleguide.  This will probably be the same as the `example` prop.
 
 
-```
+```javascript
 var React = require('react');
 var Styleguide = require('react-styleguide');
 
