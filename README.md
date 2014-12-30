@@ -66,6 +66,13 @@ speaker="Mauris porta ac lectus" />'
 });
 ```
 
+Styleguide Options
+------------------
+For the styleguide, the following options are available:
+
+- `codeClassName` - changes the `<code>` class if you do not want to use Prism.js for highlighting otherwise defaults to `language-javascript`
+- `highlight` - a function that can be passed if you want highlight the code using a different function from Prism.js's function. Defaults to just the code example itself.
+
 Optional Includes
 -----------------
 You can have the styleguide come styling free if you desire, but it is also possible to have the included styles be used (they can be seen in the screenshots).  Please look at the `demo/index.html` to see what else could be included.

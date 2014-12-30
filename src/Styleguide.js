@@ -32,8 +32,8 @@ let Styleguide = React.createClass({
           <div className="Styleguide-components-component-example">{child.props.children}</div>
           <div className="Styleguide-components-component-code">
             <pre>
-              <code className="language-javascript"> 
-                {child.props.example}
+              <code className={self.props.codeClassName ? self.props.codeClassName : "language-javascript"}> 
+                {self.props.highlight ? self.props.highlight(child.props.example) : child.props.example}
               </code>
             </pre>
           </div>
