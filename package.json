@@ -4,7 +4,7 @@
   "description": "A component that generates a style guide from components",
   "main": "dist/Styleguide.js",
   "scripts": {
-    "prebuild": "npm run styles",
+    "prebuild": "mkdir -p dist && npm run styles",
     "build": "6to5 src -d dist --modules commonInterop",
     "postbuild": "browserify dist/StyleguideDemo.js -o demo/demo.js",
     "test": "npm run build && mocha ./dist/test/**/*.js",
