@@ -29,4 +29,8 @@ node_modules
 # Compiled files
 dist
 
+scss/main.css
+scss/main.css.map
+scss/.sass-cache/
+
 run.sh
