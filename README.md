@@ -34,6 +34,9 @@ Inside the `div`, include the code that should be rendered and displayed in the 
 var React = require('react');
 var Styleguide = require('react-styleguide');
 
+// If you would like to include Prism.js as the syntax highlighter
+var Prism from '../demo/vendor/prism.js';
+
 // Require the components that you want to include
 import Button from './examples/Button.js'; 
 import Blockquote from './examples/Blockquote.js'; 
@@ -79,7 +82,7 @@ You can have the styleguide come styling free if you desire, but it is also poss
 
 - Google web fonts
 - `main.css` located in the `dist` folder
-- `prism.js` located in the `demo` folder
+- `prism.js` located in the `demo` folder (can be included via Node.js or browser side)
 
 Any and all of these are optional but are recommended.
 
