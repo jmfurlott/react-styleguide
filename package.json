@@ -1,6 +1,6 @@
 {
   "name": "react-styleguide",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A component that generates a style guide from components",
   "main": "dist/Styleguide.js",
   "scripts": {
