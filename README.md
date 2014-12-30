@@ -1,6 +1,6 @@
 react-styleguide
 ----------------
-A React component that takes in other components and organizes them into an easy to use styleguide. Please view the `demo` folder if you would like to see a working version.
+A React component that takes in other components and organizes them into an easy to use styleguide.
 
 Installation
 ------------
@@ -39,25 +39,28 @@ import Button from './examples/Button.js';
 import Blockquote from './examples/Blockquote.js'; 
 
 var Component = React.createClass({
-render: function() {
-  <Styleguide title="Example Project Styleguide">
-    <div 
-      title="Blockquote" 
-      description="Here is a description describing a simple Blockquote component and how to use it." 
-      example='<Blockquote 
+  render: function() {
+    <Styleguide title="Example Project Styleguide">
+      <div 
+        title="Blockquote" 
+        description="Here is a description describing a simple Blockquote component and how to use it." 
+        example='<Blockquote 
 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec imperdiet ligula." 
 speaker="Mauris porta ac lectus" />'
-    >
-      <Blockquote text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec imperdiet ligula." speaker="Mauris porta ac lectus" />
-    </div>
+      >
+        <Blockquote text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec imperdiet ligula." speaker="Mauris porta ac lectus" />
+      </div>
 
-    <div 
-      title="Button" 
-      description="Here is a description describing a simple Button component and how you would use it." 
-      example="<Button />"
+      <div 
+        title="Button" 
+        description="Here is a description describing a simple Button component and how you would use it." 
+        example="<Button />"
       >
         <Button />
       </div>
+
+      ...
+      
     </Styleguide>
   }
 });
