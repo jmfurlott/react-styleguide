@@ -5,8 +5,17 @@ A React component that takes in other components and organizes them into an easy
 Installation
 ------------
 ```
-npm install --save react-styleguide
+$ npm install --save react-styleguide
 ```
+
+To view a working demo version,
+
+```
+$ npm install
+$ npm run build
+```
+
+And then open the `demo/index.html` file in your browser.
 
 Example Usage
 -------------
