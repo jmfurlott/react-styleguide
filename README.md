@@ -17,6 +17,8 @@ $ npm run build
 
 And then open the `demo/index.html` file in your browser.
 
+Or visit the live demo at [http://jmfurlott.github.io/react-styleguide](http://jmfurlott.github.io/react-styleguide)
+
 Example Usage
 -------------
 Include the generated css file from `dist` if you want to use the styling that I've created in your project.
