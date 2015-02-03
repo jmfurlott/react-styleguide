@@ -1,0 +1,124 @@
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+code[class*="language-"], pre[class*="language-"] {
+  color: #f8f8f2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em; }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: #272822; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em; }
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: slategray; }
+
+.token.punctuation {
+  color: #f8f8f2; }
+
+.namespace {
+  opacity: 0.7; }
+
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+  color: #f92672; }
+
+.token.boolean, .token.number {
+  color: #ae81ff; }
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #a6e22e; }
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable {
+  color: #f8f8f2; }
+
+.token.atrule, .token.attr-value {
+  color: #e6db74; }
+
+.token.keyword {
+  color: #66d9ef; }
+
+.token.regex, .token.important {
+  color: #fd971f; }
+
+.token.important {
+  font-weight: bold; }
+
+.token.entity {
+  cursor: help; }
+
+.Styleguide {
+  font-family: 'Open Sans', sans-serif; }
+  .Styleguide-header {
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #272822;
+    color: white; }
+    .Styleguide-header > h1 {
+      font-family: 'Open Sans', sans-serif;
+      padding-left: 2rem;
+      font-weight: 100;
+      margin: 0;
+      line-height: 5rem; }
+  .Styleguide-sidebar {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    height: 100%;
+    width: 12.5rem;
+    border-right: solid 1px #eee; }
+    .Styleguide-sidebar > ul {
+      list-style-type: none;
+      padding-left: 0; }
+      .Styleguide-sidebar > ul li {
+        position: relative;
+        text-align: center;
+        transition: background-color 150ms linear; }
+        .Styleguide-sidebar > ul li a {
+          text-decoration: none;
+          color: black;
+          width: 100%;
+          padding: 1rem 0;
+          display: block; }
+        .Styleguide-sidebar > ul li:hover {
+          background-color: #eee;
+          transition: background-color 150ms linear; }
+  .Styleguide-components {
+    position: relative;
+    margin-left: 12.5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .Styleguide-components-component {
+      padding-top: 4rem; }
+      .Styleguide-components-component-example {
+        border: solid 1px #eeeeee;
+        padding: 1rem; }
