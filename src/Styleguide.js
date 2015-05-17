@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react/addons';
+import reactToJsx from 'react-to-jsx';
 
 let Styleguide = React.createClass({ 
 
@@ -24,7 +25,7 @@ let Styleguide = React.createClass({
       console.log(child);
       
       let title = child.props.title.replace(' ','-');
-
+      let code = reactToJsx(child.props.children);
       return(
         <div className="Styleguide-components-component" id={title}>
           <h2 className="Styleguide-components-component-title">{child.props.title}</h2>
@@ -33,7 +34,7 @@ let Styleguide = React.createClass({
           <div className="Styleguide-components-component-code">
             <pre>
               <code className={self.props.codeClassName ? self.props.codeClassName : "language-javascript"}> 
-                {self.props.highlight ? self.props.highlight(child.props.example) : child.props.example}
+                {self.props.highlight ? self.props.highlight(code) : code}
               </code>
             </pre>
           </div>

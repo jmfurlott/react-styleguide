@@ -32,7 +32,7 @@
     "mocha": "~2.0.1",
     "node-sass": "1.2.2",
     "react": "0.12.x",
-    "reactify": "~0.17.1"
-  },
-  "dependencies": {}
+    "reactify": "~0.17.1",
+    "react-to-jsx": "^1.2.0"
+  }
 }
