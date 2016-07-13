@@ -10,9 +10,9 @@ let Styleguide = React.createClass({
     
     children = (React.Children.count(children) == 1) ? [ children ] : children;
     
-    return children.map(function(child) {
+    return children.map(function(child, index) {
       let title = child.props.title.replace(' ','-');
-      return <li><a href={'#' + title}>{child.props.title}</a></li>;
+      return <li key={`component-${index}`><a href={'#' + title}>{child.props.title}</a></li>;
     });
   },
 
