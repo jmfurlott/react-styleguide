@@ -21,13 +21,13 @@ let Styleguide = React.createClass({
     let self = this;
 
     children = (React.Children.count(children) == 1) ? [ children ] : children;
-    return children.map(function(child) {
+    return children.map(function(child, index) {
       console.log(child);
       
       let title = child.props.title.replace(' ','-');
       let code = reactToJsx(child.props.children);
       return(
-        <div className="Styleguide-components-component" id={title}>
+        <div key={`StyleguideChild-${index}`} className="Styleguide-components-component" id={title}>
           <h2 className="Styleguide-components-component-title">{child.props.title}</h2>
           <p className="Styleguide-components-component-description">{child.props.description}</p>
           <div className="Styleguide-components-component-example">{child.props.children}</div>
